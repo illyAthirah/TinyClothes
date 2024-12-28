@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Tiny Store | Baby Shop</title>
+  <title>Waggy - Free eCommerce Pet Shop HTML Website Template</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,53 +95,48 @@
     </defs>
   </svg>
 
-  <div class="preloader-wrapper">
-    <div class="preloader">
-    </div>
-  </div>
-
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
-    <div class="offcanvas-header justify-content-center">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
-          <span class="badge bg-primary rounded-circle pt-2">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0"></h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$12</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Dog Food</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Soft Toy</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span class="fw-bold">Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-        </ul>
-
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+        <div class="offcanvas-header justify-content-center">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary">Your cart</span>
+              <span class="badge bg-primary rounded-circle pt-2">3</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0"></h6>
+                  <small class="text-body-secondary">Brief description</small>
+                </div>
+                <span class="text-body-secondary">$12</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Dog Food</h6>
+                  <small class="text-body-secondary">Brief description</small>
+                </div>
+                <span class="text-body-secondary">$8</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Soft Toy</h6>
+                  <small class="text-body-secondary">Brief description</small>
+                </div>
+                <span class="text-body-secondary">$5</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span class="fw-bold">Total (USD)</span>
+                <strong>$20</strong>
+              </li>
+            </ul>
+    
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch"
     aria-labelledby="Search">
@@ -199,9 +194,6 @@
             <span class="fs-6 secondary-font text-muted">Email</span>
             <h5 class="mb-0">TinyStore@gmail.com</h5>
           </div>
-
-
-
         </div>
       </div>
     </div>
@@ -216,7 +208,7 @@
         <div class="d-flex d-lg-none align-items-end mt-3">
           <ul class="d-flex justify-content-end list-unstyled m-0">
             <li>
-              <a href="login.html" class="mx-3">
+              <a href="account.html" class="mx-3">
                 <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
               </a>
             </li>
@@ -261,22 +253,22 @@
           <div class="offcanvas-body justify-content-between">
             <select class="filter-categories border-0 mb-0 me-5">
               <option>Shop by Category</option>
-              <option>Newborn</option>
-              <option>Toddler</option>
-              <option>Accessories</option>
-              <option>Festive Wear</option>
+              <option>Clothes</option>
+              <option>Food</option>
+              <option>Food</option>
+              <option>Toy</option>
             </select>
 
             <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
               <li class="nav-item">
                 <a href="index.html" class="nav-link active">Home</a>
               </li>
-              <!--<li class="nav-item dropdown">
+              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown"
                   aria-expanded="false">Pages</a>
                 <ul class="dropdown-menu" aria-labelledby="pages">
                   <li><a href="aboutUs.html" class="dropdown-item">About Us</a></li>
-                  <li><a href="index.html" class="dropdown-item">Shop</a></li>
+                  <li><a href="productPage.html" class="dropdown-item">Shop</a></li>
                   <li><a href="index.html" class="dropdown-item">Single Product</a></li>
                   <li><a href="index.html" class="dropdown-item">Cart</a></li>
                   <li><a href="index.html" class="dropdown-item">Wishlist</a></li>
@@ -290,19 +282,19 @@
                   <li><a href="index.html" class="dropdown-item">Error 404</a></li>
                   <li><a href="index.html" class="dropdown-item">Styles</a></li>
                 </ul>
-              </li>-->
-              <li class="nav-item">
-                <a href="index.html" class="nav-link">Shop</a>
               </li>
-              <!--<li class="nav-item">
+              <li class="nav-item">
+                <a href="productPage.html" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item">
                 <a href="index.html" class="nav-link">Blog</a>
-              </li>-->
+              </li>
               <li class="nav-item">
                 <a href="contactUs.html" class="nav-link">Contact</a>
               </li>
-              <!--<li class="nav-item">
+              <li class="nav-item">
                 <a href="index.html" class="nav-link">Others</a>
-              </li>-->
+              </li>
             </ul>
 
             <div class="d-none d-lg-flex align-items-end">
@@ -435,9 +427,9 @@
               New
             </div>
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item1.png" class="img-fluid rounded-4" alt="image"></a>
+              <a href="baju1Detail.html"><img src="images/item1.png" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
-                <a href="single-product.html">
+                <a href="baju1Detail.html">
                   <h3 class="card-title pt-4 m-0">Twinnies Set</h3>
                 </a>
 
@@ -450,7 +442,7 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0</span>
 
-                  <h3 class="secondary-font text-primary">$18.00</h3>
+                  <h3 class="secondary-font text-primary">RM34.20</h3>
 
                   <div class="d-flex flex-wrap mt-3">
                     <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -472,9 +464,9 @@
               New
             </div> -->
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item2.png" class="img-fluid rounded-4" alt="image"></a>
+              <a href="baju2Detail.html"><img src="images/item2.png" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
-                <a href="single-product.html">
+                <a href="baju2Detail.html">
                   <h3 class="card-title pt-4 m-0">Girly Set</h3>
                 </a>
 
@@ -487,7 +479,8 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0</span>
 
-                  <h3 class="secondary-font text-primary">$18.00</h3>
+                  <h3 class="secondary-font text-primary">
+                    <h3 class="secondary-font text-primary">RM39.90</h3>
 
                   <div class="d-flex flex-wrap mt-3">
                     <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -508,10 +501,10 @@
               -10%
             </div>
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item3.png" class="img-fluid rounded-4" alt="image"></a>
+              <a href="baju3Detail.html"><img src="images/item3.png" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
-                <a href="single-product.html">
-                  <h3 class="card-title pt-4 m-0">Twinnies Set</h3>
+                <a href="baju3Detail.html">
+                  <h3 class="card-title pt-4 m-0">Twinnies Couple</h3>
                 </a>
 
                 <div class="card-text">
@@ -523,7 +516,7 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0</span>
 
-                  <h3 class="secondary-font text-primary">$18.00</h3>
+                  <h3 class="secondary-font text-primary">RM65.00</h3>
 
                   <div class="d-flex flex-wrap mt-3">
                     <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -545,9 +538,9 @@
               New
             </div> -->
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item4.png" class="img-fluid rounded-4" alt="image"></a>
+              <a href="baju4Detail.html"><img src="images/item4.png" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
-                <a href="single-product.html">
+                <a href="baju4Detail.html">
                   <h3 class="card-title pt-4 m-0">Summer Set</h3>
                 </a>
 
@@ -560,7 +553,7 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0</span>
 
-                  <h3 class="secondary-font text-primary">$18.00</h3>
+                  <h3 class="secondary-font text-primary">RM40.00</h3>
 
                   <div class="d-flex flex-wrap mt-3">
                     <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -689,9 +682,9 @@
             New
           </div> -->
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item9.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="fav1.html"><img src="images/item9.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
-              <a href="single-product.html">
+              <a href="fav1.html">
                 <h3 class="card-title pt-4 m-0">Feeding Cup</h3>
               </a>
 
@@ -704,7 +697,7 @@
                   <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                   5.0</span>
 
-                <h3 class="secondary-font text-primary">$18.00</h3>
+                <h3 class="secondary-font text-primary">RM24.50</h3>
 
                 <div class="d-flex flex-wrap mt-3">
                   <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -714,10 +707,7 @@
                     <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
                   </a>
                 </div>
-
-
               </div>
-
             </div>
           </div>
         </div>
@@ -727,9 +717,9 @@
             New
           </div>
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item10.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="fav2.html"><img src="images/item10.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
-              <a href="single-product.html">
+              <a href="fav2.html">
                 <h3 class="card-title pt-4 m-0">Feeding Spoons</h3>
               </a>
 
@@ -742,7 +732,7 @@
                   <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                   5.0</span>
 
-                <h3 class="secondary-font text-primary">$18.00</h3>
+                <h3 class="secondary-font text-primary">RM12.90</h3>
 
                 <div class="d-flex flex-wrap mt-3">
                   <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -765,9 +755,9 @@
             New
           </div> -->
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item11.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="fav3.html"><img src="images/item11.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
-              <a href="single-product.html">
+              <a href="fav3.html">
                 <h3 class="card-title pt-4 m-0">Feeding Fork</h3>
               </a>
 
@@ -780,7 +770,7 @@
                   <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                   5.0</span>
 
-                <h3 class="secondary-font text-primary">$18.00</h3>
+                <h3 class="secondary-font text-primary">RM13.90</h3>
 
                 <div class="d-flex flex-wrap mt-3">
                   <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -803,9 +793,9 @@
             Sold
           </div>
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item12.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="fav4.html"><img src="images/item12.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
-              <a href="single-product.html">
+              <a href="fav4.html">
                 <h3 class="card-title pt-4 m-0">Training Cup</h3>
               </a>
 
@@ -818,7 +808,7 @@
                   <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                   5.0</span>
 
-                <h3 class="secondary-font text-primary">$18.00</h3>
+                <h3 class="secondary-font text-primary">RM19.90</h3>
 
                 <div class="d-flex flex-wrap mt-3">
                   <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -841,9 +831,9 @@
             New
           </div> -->
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item13.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="fav5.html"><img src="images/item13.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
-              <a href="single-product.html">
+              <a href="fav5.html">
                 <h3 class="card-title pt-4 m-0">Simulation Medical Box </h3>
               </a>
 
@@ -856,7 +846,7 @@
                   <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                   5.0</span>
 
-                <h3 class="secondary-font text-primary">$18.00</h3>
+                <h3 class="secondary-font text-primary">RM45.90</h3>
 
                 <div class="d-flex flex-wrap mt-3">
                   <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -879,9 +869,9 @@
             New
           </div> -->
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item14.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="fav6.html"><img src="images/item14.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
-              <a href="single-product.html">
+              <a href="fav6.html">
                 <h3 class="card-title pt-4 m-0">Puzzle Box</h3>
               </a>
 
@@ -894,7 +884,7 @@
                   <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                   5.0</span>
 
-                <h3 class="secondary-font text-primary">$18.00</h3>
+                <h3 class="secondary-font text-primary">RM29.90</h3>
 
                 <div class="d-flex flex-wrap mt-3">
                   <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -917,9 +907,9 @@
             Sale
           </div>
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item15.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="fav7.html"><img src="images/item15.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
-              <a href="single-product.html">
+              <a href="fav7.html">
                 <h3 class="card-title pt-4 m-0">First Bite Gift Set</h3>
               </a>
 
@@ -932,7 +922,7 @@
                   <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                   5.0</span>
 
-                <h3 class="secondary-font text-primary">$18.00</h3>
+                <h3 class="secondary-font text-primary">RM59.90</h3>
 
                 <div class="d-flex flex-wrap mt-3">
                   <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -955,9 +945,9 @@
             New
           </div> -->
           <div class="card position-relative">
-            <a href="single-product.html"><img src="images/item16.jpg" class="img-fluid rounded-4" alt="image"></a>
+            <a href="fav8.html"><img src="images/item16.jpg" class="img-fluid rounded-4" alt="image"></a>
             <div class="card-body p-0">
-              <a href="single-product.html">
+              <a href="fav8.html">
                 <h3 class="card-title pt-4 m-0">Sippy Cup</h3>
               </a>
 
@@ -970,7 +960,7 @@
                   <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                   5.0</span>
 
-                <h3 class="secondary-font text-primary">$18.00</h3>
+                <h3 class="secondary-font text-primary">RM22.90</h3>
 
                 <div class="d-flex flex-wrap mt-3">
                   <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -1093,9 +1083,9 @@
               New
             </div> -->
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item5.jpg" class="img-fluid rounded-4" alt="image"></a>
+              <a href="best1.html"><img src="images/item5.jpg" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
-                <a href="single-product.html">
+                <a href="best1.html">
                   <h3 class="card-title pt-4 m-0">Shower Kiddo</h3>
                 </a>
 
@@ -1108,7 +1098,7 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0</span>
 
-                  <h3 class="secondary-font text-primary">$18.00</h3>
+                  <h3 class="secondary-font text-primary">RM49.90</h3>
 
                   <div class="d-flex flex-wrap mt-3">
                     <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -1130,9 +1120,9 @@
               New
             </div> -->
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item6.jpg" class="img-fluid rounded-4" alt="image"></a>
+              <a href="best2.html"><img src="images/item6.jpg" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
-                <a href="single-product.html">
+                <a href="best2.html">
                   <h3 class="card-title pt-4 m-0">Daisy Dummies</h3>
                 </a>
 
@@ -1145,7 +1135,7 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0</span>
 
-                  <h3 class="secondary-font text-primary">$18.00</h3>
+                  <h3 class="secondary-font text-primary">RM19.90</h3>
 
                   <div class="d-flex flex-wrap mt-3">
                     <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -1166,9 +1156,9 @@
               Sale
             </div>
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item7.jpg" class="img-fluid rounded-4" alt="image"></a>
+              <a href="best3.html"><img src="images/item7.jpg" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
-                <a href="single-product.html">
+                <a href="best3.html">
                   <h3 class="card-title pt-4 m-0">Milkies Cup</h3>
                 </a>
 
@@ -1181,7 +1171,7 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0</span>
 
-                  <h3 class="secondary-font text-primary">$18.00</h3>
+                  <h3 class="secondary-font text-primary">RM24.90</h3>
 
                   <div class="d-flex flex-wrap mt-3">
                     <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
@@ -1191,10 +1181,7 @@
                       <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
                     </a>
                   </div>
-
-
                 </div>
-
               </div>
             </div>
           </div>
@@ -1203,9 +1190,9 @@
               New
             </div> -->
             <div class="card position-relative">
-              <a href="single-product.html"><img src="images/item8.jpg" class="img-fluid rounded-4" alt="image"></a>
+              <a href="best4.html"><img src="images/item8.jpg" class="img-fluid rounded-4" alt="image"></a>
               <div class="card-body p-0">
-                <a href="single-product.html">
+                <a href="best4.html">
                   <h3 class="card-title pt-4 m-0">Beach Toy Set</h3>
                 </a>
 
@@ -1218,7 +1205,7 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0</span>
 
-                  <h3 class="secondary-font text-primary">$18.00</h3>
+                  <h3 class="secondary-font text-primary">RM39.90</h3>
 
                   <div class="d-flex flex-wrap mt-3">
                     <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
