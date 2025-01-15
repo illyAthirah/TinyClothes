@@ -234,7 +234,7 @@ if ($result->num_rows > 0) {
                   </a>
                 </li>
                 <li>
-                  <a href="wishlist.html" class="mx-3">
+                  <a href="views/wishlist.php" class="mx-3">
                     <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
                   </a>
                 </li>
@@ -244,7 +244,7 @@ if ($result->num_rows > 0) {
                     aria-controls="offcanvasCart">
                     <iconify-icon icon="mdi:cart" class="fs-4 position-relative"></iconify-icon>
                     <span class="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
-                      03
+                      
                     </span>
                   </a>
                 </li>

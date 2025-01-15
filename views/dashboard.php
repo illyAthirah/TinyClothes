@@ -3,7 +3,7 @@ session_start();
 require '../controllers/userController.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: login.html');
     exit;
 }
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_user_info'])) {
   // Logout Logic
   if (isset($_GET['logout'])) {
     session_destroy();
-    header('Location: login.php');
+    header('Location: login.html');
     exit;
   }
 

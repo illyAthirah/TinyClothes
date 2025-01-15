@@ -227,12 +227,12 @@ if ($result->num_rows > 0) {
         <div class="d-flex d-lg-none align-items-end mt-3">
           <ul class="d-flex justify-content-end list-unstyled m-0">
             <li>
-              <a href="account.html" class="mx-3">
+              <a href="views/account.php" class="mx-3">
                 <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
               </a>
             </li>
             <li>
-              <a href="wishlist.html" class="mx-3">
+              <a href="views/wishlist.php" class="mx-3">
                 <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
               </a>
             </li>
@@ -318,7 +318,7 @@ if ($result->num_rows > 0) {
                   </a>
                 </li>
                 <li>
-                  <a href="index.php" class="mx-3">
+                 <a href="views/wishlist.php" class="mx-3">
                     <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
                   </a>
                 </li>
@@ -328,7 +328,7 @@ if ($result->num_rows > 0) {
                     aria-controls="offcanvasCart">
                     <iconify-icon icon="mdi:cart" class="fs-4 position-relative"></iconify-icon>
                     <span class="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
-                      03
+                      
                     </span>
                   </a>
                 </li>

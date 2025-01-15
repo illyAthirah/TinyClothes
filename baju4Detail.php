@@ -235,7 +235,7 @@ if ($result->num_rows > 0) {
             </a>
           </li>
           <li>
-            <a href="wishlist.html" class="mx-3">
+            <a href="views/wishlist.php" class="mx-3">
               <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
             </a>
           </li>

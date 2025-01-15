@@ -3,7 +3,7 @@ session_start();
 require '../controllers/wishlistController.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: login.html');
     exit;
 }
 

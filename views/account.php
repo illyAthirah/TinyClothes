@@ -3,7 +3,7 @@ session_start();
 require '../controllers/userController.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: ../login.html');
     exit;
 }
 
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_user_info'])) {
 // Logout Logic
 if (isset($_GET['logout'])) {
     session_destroy();
-    header('Location: login.php');
+    header('Location: login.html');
     exit;
 }
 ?>
@@ -421,7 +421,7 @@ button {
 
 <div class="menu">
         <ul>
-          <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="../index.php"><i class="fa fa-home"></i> Home</a></li>
           <li><a href="orderHistory.php"><i class="fa fa-box"></i> Order History</a></li> <!-- Changed from Categories to Order History -->
           <li><a href="wishlist.php"><i class="fa fa-heart"></i> Wishlist</a></li> <!-- Changed from Wallet to Wishlist -->
           <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>

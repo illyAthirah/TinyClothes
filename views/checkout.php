@@ -209,7 +209,7 @@ $conn->close();
 
         <div class="col-sm-4 col-lg-3 text-center text-sm-start">
           <div class="main-logo">
-            <a href="index.php">
+            <a href="../index.php">
               <img src="../images/logo.png" alt="logo" class="img-fluid">
             </a>
           </div>
@@ -252,12 +252,12 @@ $conn->close();
         <div class="d-flex d-lg-none align-items-end mt-3">
           <ul class="d-flex justify-content-end list-unstyled m-0">
             <li>
-              <a href="account.html" class="mx-3">
+              <a href="views/account.php" class="mx-3">
                 <iconify-icon icon="healthicons:person" class="fs-4"></iconify-icon>
               </a>
             </li>
             <li>
-              <a href="wishlist.html" class="mx-3">
+              <a href="views/wishlist.php" class="mx-3">
                 <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
               </a>
             </li>
@@ -299,20 +299,20 @@ $conn->close();
 
             <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
               <li class="nav-item">
-                <a href="index.php" class="nav-link active">Home</a>
+                <a href="../index.php" class="nav-link active">Home</a>
               </li>
               
               <li class="nav-item">
-                <a href="productPage.php" class="nav-link">Shop</a>
+                <a href="../productPage.php" class="nav-link">Shop</a>
               </li>
               <li class="nav-item">
-                <a href="aboutUs.html" class="nav-link">About Us</a>
+                <a href="../aboutUs.html" class="nav-link">About Us</a>
               </li>
               <li class="nav-item">
-                <a href="contactUs.html" class="nav-link">Contact</a>
+                <a href="../contactUs.html" class="nav-link">Contact</a>
               </li>
               <li class="nav-item">
-                <a href="faq.html" class="nav-link">FAQs</a>
+                <a href="../faq.html" class="nav-link">FAQs</a>
               </li>
             </ul>
 
@@ -324,17 +324,17 @@ $conn->close();
                   </a>
                 </li>
                 <li>
-                  <a href="index.php" class="mx-3">
+                  <a href="../index.php" class="mx-3">
                     <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
                   </a>
                 </li>
 
                 <li class="">
-                  <a href="index.php" class="mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                  <a href="../index.php" class="mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
                     aria-controls="offcanvasCart">
                     <iconify-icon icon="mdi:cart" class="fs-4 position-relative"></iconify-icon>
                     <span class="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
-                      03
+                      
                     </span>
                   </a>
                 </li>
