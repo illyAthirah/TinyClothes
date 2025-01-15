@@ -183,7 +183,7 @@ if ($result->num_rows > 0) {
     
             <div class="col-sm-4 col-lg-3 text-center text-sm-start">
               <div class="main-logo">
-                <a href="index.html">
+                <a href="index.php">
                   <img src="images/logo.png" alt="logo" class="img-fluid">
                 </a>
               </div>
@@ -279,39 +279,39 @@ if ($result->num_rows > 0) {
     
                 <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
                   <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="index.php" class="nav-link active">Home</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown"
                       aria-expanded="false">Pages</a>
                     <ul class="dropdown-menu" aria-labelledby="pages">
                       <li><a href="aboutUs.html" class="dropdown-item">About Us</a></li>
-                      <li><a href="index.html" class="dropdown-item">Shop</a></li>
-                      <li><a href="index.html" class="dropdown-item">Single Product</a></li>
-                      <li><a href="index.html" class="dropdown-item">Cart</a></li>
-                      <li><a href="index.html" class="dropdown-item">Wishlist</a></li>
-                      <li><a href="index.html" class="dropdown-item">Checkout</a></li>
-                      <li><a href="index.html" class="dropdown-item">Blog</a></li>
-                      <li><a href="index.html" class="dropdown-item">Single Post</a></li>
+                      <li><a href="index.php" class="dropdown-item">Shop</a></li>
+                      <li><a href="index.php" class="dropdown-item">Single Product</a></li>
+                      <li><a href="index.php" class="dropdown-item">Cart</a></li>
+                      <li><a href="index.php" class="dropdown-item">Wishlist</a></li>
+                      <li><a href="index.php" class="dropdown-item">Checkout</a></li>
+                      <li><a href="index.php" class="dropdown-item">Blog</a></li>
+                      <li><a href="index.php" class="dropdown-item">Single Post</a></li>
                       <li><a href="contactUs.html" class="dropdown-item">Contact</a></li>
-                      <li><a href="index.html" class="dropdown-item">FAQs</a></li>
-                      <li><a href="index.html" class="dropdown-item">Account</a></li>
-                      <li><a href="index.html" class="dropdown-item">Thankyou</a></li>
-                      <li><a href="index.html" class="dropdown-item">Error 404</a></li>
-                      <li><a href="index.html" class="dropdown-item">Styles</a></li>
+                      <li><a href="index.php" class="dropdown-item">FAQs</a></li>
+                      <li><a href="index.php" class="dropdown-item">Account</a></li>
+                      <li><a href="index.php" class="dropdown-item">Thankyou</a></li>
+                      <li><a href="index.php" class="dropdown-item">Error 404</a></li>
+                      <li><a href="index.php" class="dropdown-item">Styles</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
                     <a href="productPage.html" class="nav-link">Shop</a>
                   </li>
                   <li class="nav-item">
-                    <a href="index.html" class="nav-link">Blog</a>
+                    <a href="index.php" class="nav-link">Blog</a>
                   </li>
                   <li class="nav-item">
                     <a href="contactUs.html" class="nav-link">Contact</a>
                   </li>
                   <li class="nav-item">
-                    <a href="index.html" class="nav-link">Others</a>
+                    <a href="index.php" class="nav-link">Others</a>
                   </li>
                 </ul>
     
@@ -323,13 +323,13 @@ if ($result->num_rows > 0) {
                       </a>
                     </li>
                     <li>
-                      <a href="index.html" class="mx-3">
+                      <a href="index.php" class="mx-3">
                         <iconify-icon icon="mdi:heart" class="fs-4"></iconify-icon>
                       </a>
                     </li>
     
                     <li class="">
-                      <a href="index.html" class="mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                      <a href="index.php" class="mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
                         aria-controls="offcanvasCart">
                         <iconify-icon icon="mdi:cart" class="fs-4 position-relative"></iconify-icon>
                         <span class="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
