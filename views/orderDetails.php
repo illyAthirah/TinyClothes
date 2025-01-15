@@ -43,6 +43,9 @@ $order = getOrderDetails($order_id, $user_id); // Fetch the specific order detai
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Details</title>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
+
 </head>
 <body>
 

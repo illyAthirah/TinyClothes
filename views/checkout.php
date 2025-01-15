@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: login.html");
     exit();
 }
 
@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 }
 
 $userId = $_SESSION['user_id'];
-$sql = "SELECT name, email FROM users WHERE user_id = $userId";
+$sql = "SELECT name, email FROM users WHERE id = $userId";
 $result = $conn->query($sql);
 $user = $result->fetch_assoc();
 
@@ -42,8 +42,7 @@ $conn->close();
 <html lang="en">
 
 <head>
-  <title>Checkout - Tiny Clothes</title>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
@@ -51,19 +50,27 @@ $conn->close();
   <meta name="author" content="">
   <meta name="keywords" content="">
   <meta name="description" content="">
+  <title>Checkout </title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="css/vendor.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat:wght@300;400;500&display=swap"
     rel="stylesheet">
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
+
 </head>
 
 <body>
@@ -132,7 +139,48 @@ $conn->close();
     </defs>
   </svg>
 
-  
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Your cart</span>
+          <span class="badge bg-primary rounded-circle pt-2">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0"></h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Dog Food</h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Soft Toy</h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="fw-bold">Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+        <button class="w-100 btn btn-primary btn-lg" type="button" onclick="window.location.href='login.html'">Continue to checkout</button>
+      </div>
+    </div>
+  </div>
 
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch"
     aria-labelledby="Search">
@@ -162,7 +210,7 @@ $conn->close();
         <div class="col-sm-4 col-lg-3 text-center text-sm-start">
           <div class="main-logo">
             <a href="index.php">
-              <img src="images/logo.png" alt="logo" class="img-fluid">
+              <img src="../images/logo.png" alt="logo" class="img-fluid">
             </a>
           </div>
         </div>
@@ -171,7 +219,7 @@ $conn->close();
           <div class="search-bar border rounded-2 px-3 border-dark-subtle">
             <form id="search-form" class="text-center d-flex align-items-center" action="" method="">
               <input type="text" class="form-control border-0 bg-transparent"
-                placeholder="Search for more than 10,000 products" />
+                placeholder="Search" />
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor"
                   d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
@@ -247,49 +295,24 @@ $conn->close();
           </div>
 
           <div class="offcanvas-body justify-content-between">
-            <select class="filter-categories border-0 mb-0 me-5">
-              <option>Shop by Category</option>
-              <option>Clothes</option>
-              <option>Food</option>
-              <option>Food</option>
-              <option>Toy</option>
-            </select>
+            <div class="offcanvas-body justify-content-between"></div>
 
             <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
               <li class="nav-item">
                 <a href="index.php" class="nav-link active">Home</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown"
-                  aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu" aria-labelledby="pages">
-                  <li><a href="aboutUs.html" class="dropdown-item">About Us</a></li>
-                  <li><a href="productPage.php" class="dropdown-item">Shop</a></li>
-                  <li><a href="index.php" class="dropdown-item">Single Product</a></li>
-                  <li><a href="index.php" class="dropdown-item">Cart</a></li>
-                  <li><a href="index.php" class="dropdown-item">Wishlist</a></li>
-                  <li><a href="index.php" class="dropdown-item">Checkout</a></li>
-                  <li><a href="index.php" class="dropdown-item">Blog</a></li>
-                  <li><a href="index.php" class="dropdown-item">Single Post</a></li>
-                  <li><a href="contactUs.html" class="dropdown-item">Contact</a></li>
-                  <li><a href="index.php" class="dropdown-item">FAQs</a></li>
-                  <li><a href="index.php" class="dropdown-item">Account</a></li>
-                  <li><a href="index.php" class="dropdown-item">Thankyou</a></li>
-                  <li><a href="index.php" class="dropdown-item">Error 404</a></li>
-                  <li><a href="index.php" class="dropdown-item">Styles</a></li>
-                </ul>
-              </li>
+              
               <li class="nav-item">
                 <a href="productPage.php" class="nav-link">Shop</a>
               </li>
               <li class="nav-item">
-                <a href="index.php" class="nav-link">Blog</a>
+                <a href="aboutUs.html" class="nav-link">About Us</a>
               </li>
               <li class="nav-item">
                 <a href="contactUs.html" class="nav-link">Contact</a>
               </li>
               <li class="nav-item">
-                <a href="index.php" class="nav-link">Others</a>
+                <a href="faq.html" class="nav-link">FAQs</a>
               </li>
             </ul>
 
@@ -316,21 +339,12 @@ $conn->close();
                   </a>
                 </li>
               </ul>
-
             </div>
-
           </div>
-
         </div>
-
       </nav>
-
-
-
     </div>
-    </header>
-
-    <?php include 'cart_sidebar.php'; ?>
+  </header>
 
   <div class="container my-5">
     <h2 class="mb-4">Checkout</h2>
@@ -350,9 +364,9 @@ $conn->close();
       <div class="mb-3">
         <label for="paymentMethod" class="form-label">Payment Method</label>
         <select class="form-select" id="paymentMethod" name="paymentMethod" required>
-          <option value="credit_card">Credit Card</option>
+          <option value="creditCard">Credit Card</option>
           <option value="paypal">PayPal</option>
-          <option value="bank_transfer">Bank Transfer</option>
+          <option value="bankTransfer">Bank Transfer</option>
         </select>
       </div>
       <h4 class="mb-3">Your Cart</h4>
@@ -377,7 +391,106 @@ $conn->close();
     </form>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer id="footer" class="my-5">
+    <div class="container py-5 my-5">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="footer-menu">
+            <img src="../images/logo.png" alt="logo">
+            <p class="blog-paragraph fs-6 mt-3">Subscribe to our newsletter to get updates about our grand offers.</p>
+            <div class="social-links">
+              <ul class="d-flex list-unstyled gap-2">
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon" icon="ri:facebook-fill"></iconify-icon>
+                  </a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon" icon="ri:twitter-fill"></iconify-icon>
+                  </a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon" icon="ri:pinterest-fill"></iconify-icon>
+                  </a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon" icon="ri:instagram-fill"></iconify-icon>
+                  </a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon" icon="ri:youtube-fill"></iconify-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-menu">
+            <h3>Quick Links</h3>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="aboutUs.html" class="dropdown-item">About us</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Offer </a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Services</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-menu">
+            <h3>Help Center</h3>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="faq.html" class="nav-link">FAQs</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Payment</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Returns & Refunds</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Checkout</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Delivery Information</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <h3>Our Newsletter</h3>
+            <p class="blog-paragraph fs-6">Subscribe to our newsletter to get updates about our grand offers.</p>
+            <div class="search-bar border rounded-pill border-dark-subtle px-2">
+              <form class="text-center d-flex align-items-center" action="" method="">
+                <input type="text" class="form-control border-0 bg-transparent" placeholder="Enter your email here" />
+                <iconify-icon class="send-icon" icon="tabler:location-filled"></iconify-icon>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 
 </html>

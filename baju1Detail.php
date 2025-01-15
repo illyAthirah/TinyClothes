@@ -39,10 +39,16 @@ if ($result->num_rows > 0) {
 
   <link rel="stylesheet" type="text/css" href="css/vendor.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat:wght@300;400;500&display=swap"
     rel="stylesheet">
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
 
 </head>
 
@@ -129,7 +135,7 @@ if ($result->num_rows > 0) {
           <div class="search-bar border rounded-2 px-3 border-dark-subtle">
             <form id="search-form" class="text-center d-flex align-items-center" action="" method="">
               <input type="text" class="form-control border-0 bg-transparent"
-                placeholder="Search for more than 10,000 products" />
+                placeholder="Search" />
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor"
                   d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
@@ -205,49 +211,24 @@ if ($result->num_rows > 0) {
           </div>
 
           <div class="offcanvas-body justify-content-between">
-            <select class="filter-categories border-0 mb-0 me-5">
-              <option>Shop by Category</option>
-              <option>Clothes</option>
-              <option>Food</option>
-              <option>Food</option>
-              <option>Toy</option>
-            </select>
+            <div class="offcanvas-body justify-content-between"></div>
 
             <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
               <li class="nav-item">
-                <a href="index.php" class="nav-link active">Home</a>
+                 <a href="index.php" class="nav-link active">Home</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown"
-                  aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu" aria-labelledby="pages">
-                  <li><a href="aboutUs.html" class="dropdown-item">About Us</a></li>
-                  <li><a href="index.php" class="dropdown-item">Shop</a></li>
-                  <li><a href="index.php" class="dropdown-item">Single Product</a></li>
-                  <li><a href="index.php" class="dropdown-item">Cart</a></li>
-                  <li><a href="index.php" class="dropdown-item">Wishlist</a></li>
-                  <li><a href="index.php" class="dropdown-item">Checkout</a></li>
-                  <li><a href="index.php" class="dropdown-item">Blog</a></li>
-                  <li><a href="index.php" class="dropdown-item">Single Post</a></li>
-                  <li><a href="contactUs.html" class="dropdown-item">Contact</a></li>
-                  <li><a href="index.php" class="dropdown-item">FAQs</a></li>
-                  <li><a href="index.php" class="dropdown-item">Account</a></li>
-                  <li><a href="index.php" class="dropdown-item">Thankyou</a></li>
-                  <li><a href="index.php" class="dropdown-item">Error 404</a></li>
-                  <li><a href="index.php" class="dropdown-item">Styles</a></li>
-                </ul>
-              </li>
+              
               <li class="nav-item">
                 <a href="productPage.html" class="nav-link">Shop</a>
               </li>
               <li class="nav-item">
-                <a href="index.php" class="nav-link">Blog</a>
+                <a href="aboutUs.html" class="nav-link">About Us</a>
               </li>
               <li class="nav-item">
                 <a href="contactUs.html" class="nav-link">Contact</a>
               </li>
               <li class="nav-item">
-                <a href="index.php" class="nav-link">Others</a>
+                <a href="faq.html" class="nav-link">FAQs</a>
               </li>
             </ul>
 
@@ -384,7 +365,8 @@ if ($result->num_rows > 0) {
             <h3>Help Center</h5>
               <ul class="menu-list list-unstyled">
                 <li class="menu-item">
-                  <a href="#" class="nav-link">FAQs</a>
+                  <a href="faq.html" class="nav-link">FAQs</a>
+                </li>
                 </li>
                 <li class="menu-item">
                   <a href="#" class="nav-link">Payment</a>

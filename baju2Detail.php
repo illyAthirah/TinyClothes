@@ -43,6 +43,9 @@ if ($result->num_rows > 0) {
 <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat:wght@300;400;500&display=swap"
   rel="stylesheet">
 
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
+
 </head>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -190,7 +193,7 @@ if ($result->num_rows > 0) {
               <div class="search-bar border rounded-2 px-3 border-dark-subtle">
                 <form id="search-form" class="text-center d-flex align-items-center" action="" method="">
                   <input type="text" class="form-control border-0 bg-transparent"
-                    placeholder="Search for more than 10,000 products" />
+                    placeholder="Search" />
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path fill="currentColor"
                       d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
@@ -291,7 +294,7 @@ if ($result->num_rows > 0) {
                       <li><a href="index.php" class="dropdown-item">Blog</a></li>
                       <li><a href="index.php" class="dropdown-item">Single Post</a></li>
                       <li><a href="contactUs.html" class="dropdown-item">Contact</a></li>
-                      <li><a href="index.php" class="dropdown-item">FAQs</a></li>
+                      <li><a href="faq.html" class="dropdown-item">FAQs</a></li>
                       <li><a href="index.php" class="dropdown-item">Account</a></li>
                       <li><a href="index.php" class="dropdown-item">Thankyou</a></li>
                       <li><a href="index.php" class="dropdown-item">Error 404</a></li>
@@ -446,7 +449,8 @@ if ($result->num_rows > 0) {
                 <h3>Help Center</h5>
                   <ul class="menu-list list-unstyled">
                     <li class="menu-item">
-                      <a href="#" class="nav-link">FAQs</a>
+                      <a href="faq.html" class="nav-link">FAQs</a>
+                </li>
                     </li>
                     <li class="menu-item">
                       <a href="#" class="nav-link">Payment</a>

@@ -6,8 +6,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #cab9a7;
-  color: #4e5e72;
+  background-color: #f0f0f0;
+  color:#f0f0f0;
   text-align: center;
   font-family: monospace;
   overflow: hidden;
@@ -71,7 +71,7 @@ textarea:focus {
 }
 .wrapper {
   width: 35rem;
-  background-color: white;
+  background-color: #f0f0f0;
 }
 .letter {
   position: absolute;
@@ -84,7 +84,7 @@ textarea:focus {
 }
 .side {
   height: 12rem;
-  background-color: #fcfcf8;
+  background-color: #f0f0f0;
   outline: 1px solid transparent;
   &:nth-of-type(1) {
     padding: 2rem 2rem 0;
@@ -215,3 +215,38 @@ textarea:focus {
   100% {transform: translateY(-8rem) scale(0.3, 0.5);}
 }
 */
+
+:root {
+    --primary-color: #4CAF50; /* Example primary color */
+    --accent-color: #FF9800;  /* Example accent color */
+}
+
+.custom-navbar {
+    background-color: #ffffff; /* Change background color to white */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-navbar ul li {
+    margin: 0;
+}
+
+.custom-navbar ul li a {
+    color: var(--primary-color); /* Adjust as needed */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.custom-navbar ul li a:hover {
+    color: var(--accent-color); /* Adjust as needed */
+}

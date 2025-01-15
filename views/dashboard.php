@@ -53,7 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_user_info'])) {
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat&display=swap" rel="stylesheet">
 
-  </head>
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
+
+</head>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat&display=swap');
     :root {

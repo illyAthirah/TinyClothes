@@ -18,6 +18,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat:wght@300;400;500&display=swap"
   rel="stylesheet">
      <link rel="stylesheet" href="faq.css">
+     <style>
+        /* Include the relevant CSS styles here */
+        .faq-answer {
+            font-family: var(--secondary-font);
+            font-size: 1rem;
+            color: var(--body-color);
+            margin-top: 0.5rem;
+            max-height: 0;
+            overflow: hidden;
+            padding-left: 1.5rem;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust as needed */
+        }
+
+        .faq-item.active .faq-question {
+            font-weight: bold; /* Bold the question when open */
+        }
+    </style>
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-da400e6c-fbc1-4c20-8250-13a48c22fe4a" data-elfsight-app-lazy></div>
+
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -101,7 +128,7 @@
       <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
         <div class="search-bar border rounded-2 px-3 border-dark-subtle">
           <form id="search-form" class="text-center d-flex align-items-center" action="" method="">
-            <input type="text" class="form-control border-0 bg-transparent" placeholder="Search for more than 10,000 products" />
+            <input type="text" class="form-control border-0 bg-transparent" placeholder="Search" />
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
             </svg>
@@ -168,47 +195,24 @@
         </div>
 
         <div class="offcanvas-body justify-content-between">
-          <select class="filter-categories border-0 mb-0 me-5">
-            <option>Shop by Category</option>
-            <option>Clothes</option>
-            <option>Food</option>
-            <option>Toy</option>
-          </select>
+          <div class="offcanvas-body justify-content-between"></div>
 
           <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
             <li class="nav-item">
               <a href="index.php" class="nav-link active">Home</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-              <ul class="dropdown-menu" aria-labelledby="pages">
-                <li><a href="aboutUs.html" class="dropdown-item">About Us</a></li>
-                <li><a href="index.php" class="dropdown-item">Shop</a></li>
-                <li><a href="index.php" class="dropdown-item">Single Product</a></li>
-                <li><a href="index.php" class="dropdown-item">Cart</a></li>
-                <li><a href="index.php" class="dropdown-item">Wishlist</a></li>
-                <li><a href="checkout.html" class="dropdown-item">Checkout</a></li>
-                <li><a href="index.php" class="dropdown-item">Blog</a></li>
-                <li><a href="index.php" class="dropdown-item">Single Post</a></li>
-                <li><a href="contactUs.html" class="dropdown-item">Contact</a></li>
-                <li><a href="faq.html" class="dropdown-item">FAQs</a></li>
-                <li><a href="index.php" class="dropdown-item">Account</a></li>
-                <li><a href="index.php" class="dropdown-item">Thankyou</a></li>
-                <li><a href="index.php" class="dropdown-item">Error 404</a></li>
-                <li><a href="index.php" class="dropdown-item">Styles</a></li>
-              </ul>
+    
+            <li class="nav-item">
+              <a href="productPage.php" class="nav-link">Shop</a>
             </li>
             <li class="nav-item">
-              <a href="index.php" class="nav-link">Shop</a>
+              <a href="aboutUs.html" class="nav-link">About Us</a>
             </li>
             <li class="nav-item">
-              <a href="index.php" class="nav-link">Blog</a>
+              <a href="https://api.whatsapp.com/send?phone=601135020792" class="nav-link">Contact</a>
             </li>
             <li class="nav-item">
-              <a href="contactUs.html" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a href="index.php" class="nav-link">Others</a>
+              <a href="faq.html" class="nav-link">FAQs</a>
             </li>
           </ul>
 
@@ -242,28 +246,29 @@
 </header>
     <main>
         <section id="banner" style="background: #F9F3EC;">
-       <div class="faq-section">
+     <br> 
   <h2 class="faq-title">Frequently Asked Questions</h2>
+  <div class="faq-section">
   <div class="faq-item">
-    <div class="faq-question" onclick="toggleAnswer(this)">
+    <button class="faq-question">
       What is the return policy? <span>+</span>
-    </div>
+    </button>
     <div class="faq-answer">
       Our return policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately, we can’t offer you a refund or exchange.
     </div>
   </div>
   <div class="faq-item">
-    <div class="faq-question" onclick="toggleAnswer(this)">
+    <button class="faq-question">
       How do I track my order? <span>+</span>
-    </div>
+    </button>
     <div class="faq-answer">
       You can track your order using the tracking link provided in your confirmation email.
     </div>
   </div>
   <div class="faq-item">
-    <div class="faq-question" onclick="toggleAnswer(this)">
+    <button class="faq-question">
       Do you offer international shipping? <span>+</span>
-    </div>
+    </button>
     <div class="faq-answer">
       Yes, we offer international shipping to select countries. Additional charges may apply.
     </div>
@@ -271,20 +276,22 @@
 </div>
 
 <script>
-  function toggleAnswer(element) {
-    const answer = element.nextElementSibling;
-    const isVisible = answer.style.display === "block";
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
 
-    // Hide all answers first
-    document.querySelectorAll(".faq-answer").forEach(ans => ans.style.display = "none");
-    document.querySelectorAll(".faq-question span").forEach(span => span.textContent = "+");
-
-    // Toggle the clicked one
-    if (!isVisible) {
-      answer.style.display = "block";
-      element.querySelector("span").textContent = "-";
-    }
-  }
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const answer = item.querySelector('.faq-answer');
+        if (item.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = '0';
+        }
+      });
+    });
+  });
 </script>
 
         </section>
@@ -300,6 +307,3 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 </html>
-
-
-
