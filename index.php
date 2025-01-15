@@ -460,7 +460,7 @@
                       <a href="#" class="btn-wishlist px-4 pt-3">
                         <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
                       </a>
-                    
+                    </div>
                   </div>
                 </div>
               </div>
