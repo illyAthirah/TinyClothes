@@ -15,7 +15,7 @@
         <span class="fw-bold">Total (MYR)</span>
         <strong id="cartTotal">RM0.00</strong>
       </li>
-      <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+      <button class="w-100 btn btn-primary btn-lg" type="button" onclick="window.location.href='checkout.php'">Continue to checkout</button>
     </div>
   </div>
 </div>
