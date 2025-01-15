@@ -1,5 +1,5 @@
 Get PRO Here:
-https://templatesjungle.gumroad.com/l/waggy-pet-shop-ecommerce-html-website-template
+https://templatesjungle.gumroad.com/l/TinyClothes-pet-shop-ecommerce-html-website-template
 
 It is a free HTML CSS template by TemplatesJungle.com
 You can use this template as a starter template and start building as you require.

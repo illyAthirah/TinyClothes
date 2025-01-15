@@ -471,7 +471,7 @@ button {
         <label for="phone">Phone:</label>
         <input type="text" id="phone" name="phone" value="<?php echo htmlspecialchars($user['phone']); ?>" required>
 
-        <button type="submit">Update Information</button>
+        <button type="submit" name="update_user_info">Update Information</button>
       </form>
 
       <form action="change_password.php" method="POST">
@@ -502,4 +502,3 @@ button {
     </div>
   </body>
 </html>
-

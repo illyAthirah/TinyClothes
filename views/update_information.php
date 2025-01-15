@@ -10,7 +10,8 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 
 // Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_user_info'])) {    $name = $_POST['name'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_user_info'])) {
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $address = $_POST['address'];
     $phone = $_POST['phone'];
@@ -22,6 +23,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_user_info'])) {
         echo "Failed to update information.";
     }
 }
-
-
 ?>

@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
 
 // Database connection
 $host = "localhost";
@@ -11,6 +17,11 @@ $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+$userId = $_SESSION['user_id'];
+$sql = "SELECT name, email FROM users WHERE user_id = $userId";
+$result = $conn->query($sql);
+$user = $result->fetch_assoc();
 
 // Fetch cart items
 $sql = "SELECT c.cart_id, p.name, p.price, c.quantity 
@@ -321,18 +332,16 @@ $conn->close();
 
     <?php include 'cart_sidebar.php'; ?>
 
-    
-
   <div class="container my-5">
     <h2 class="mb-4">Checkout</h2>
     <form action="process_checkout.php" method="POST">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" name="name" required>
+        <input type="text" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($user['name']); ?>" required>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required>
+        <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
       </div>
       <div class="mb-3">
         <label for="address" class="form-label">Address</label>

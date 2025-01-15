@@ -52,7 +52,10 @@ async function addToCart(productId, quantity = 1) {
       body: JSON.stringify({ productId, quantity }),
     });
     const data = await response.json();
-    if (data.message) {
+    if (data.error === "Not logged in") {
+      alert("Please log in to add items to the cart.");
+      window.location.href = "login.php";
+    } else if (data.message) {
       alert(data.message);
       fetchCartItems(); // Refresh cart items after adding to cart
     } else {

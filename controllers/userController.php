@@ -5,11 +5,15 @@ require '../config.php';
 function updateUserDetails($user_id, $name, $email, $address, $phone) {
     global $pdo;  // Use PDO connection
 
-    $query = "UPDATE users SET name = ?, email = ?, address = ?, phone = ? WHERE id = ?";
-    $stmt = $pdo->prepare($query);  // Prepare query using PDO
-    $stmt->execute([$name, $email, $address, $phone, $user_id]);  // Execute with parameters as an array
+    try {
+        $query = "UPDATE users SET name = ?, email = ?, address = ?, phone = ? WHERE id = ?";
+        $stmt = $pdo->prepare($query);  // Prepare query using PDO
+        return $stmt->execute([$name, $email, $address, $phone, $user_id]);  // Execute with parameters as an array
+    } catch (PDOException $e) {
+        error_log("Error updating user details: " . $e->getMessage());
+        return false;
+    }
 }
-
 
 function getUserDetails($userId) {
     global $pdo;
