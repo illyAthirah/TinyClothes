@@ -93,7 +93,48 @@
     </defs>
   </svg>
 
-  
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Your cart</span>
+          <span class="badge bg-primary rounded-circle pt-2">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0"></h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Dog Food</h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Soft Toy</h6>
+              <small class="text-body-secondary">Brief description</small>
+            </div>
+            <span class="text-body-secondary">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="fw-bold">Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+      </div>
+    </div>
+  </div>
 
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch"
     aria-labelledby="Search">
@@ -284,8 +325,6 @@
     </div>
   </header>
 
-  <?php include 'cart-sidebar.php'; ?>
-
   <section id="cloth" class="my-5">
     <div class="container my-5 py-5">
 
@@ -322,12 +361,11 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0
                   </span>
-                 <h3 class="secondary-font text-primary">RM<?php echo number_format($product['price'], 2); ?></h3>
-<div class="d-flex flex-wrap mt-3">
-  <button class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?php echo $product['product_id']; ?>)">
-    <h5 class="text-uppercase m-0">Add to Cart</h5>
-  </button>
-</div>
+                  <h3 class="secondary-font text-primary">RM<?php echo number_format($product['price'], 2); ?></h3>
+                  <div class="d-flex flex-wrap mt-3">
+                    <a href="addToCart.php?product_id=<?php echo $product['product_id']; ?>" class="btn-cart me-3 px-4 pt-3 pb-3">
+                      <h5 class="text-uppercase m-0">Add to Cart</h5>
+                    </a>
                     <a href="#" class="btn-wishlist px-4 pt-3">
                       <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
                     </a>
@@ -384,12 +422,11 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0
                   </span>
-                 <h3 class="secondary-font text-primary">RM<?php echo number_format($product['price'], 2); ?></h3>
-<div class="d-flex flex-wrap mt-3">
-  <button class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?php echo $product['product_id']; ?>)">
-    <h5 class="text-uppercase m-0">Add to Cart</h5>
-  </button>
-</div>
+                  <h3 class="secondary-font text-primary">RM<?php echo number_format($product['price'], 2); ?></h3>
+                  <div class="d-flex flex-wrap mt-3">
+                    <a href="addToCart.php?product_id=<?php echo $product['product_id']; ?>" class="btn-cart me-3 px-4 pt-3 pb-3">
+                      <h5 class="text-uppercase m-0">Add to Cart</h5>
+                    </a>
                     <a href="#" class="btn-wishlist px-4 pt-3">
                       <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
                     </a>
@@ -447,12 +484,11 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0
                   </span>
-                 <h3 class="secondary-font text-primary">RM<?php echo number_format($product['price'], 2); ?></h3>
+                  <h3 class="secondary-font text-primary">RM<?php echo number_format($product['price'], 2); ?></h3>
                   <div class="d-flex flex-wrap mt-3">
-                    <button class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?php echo $product['product_id']; ?>)">
+                    <a href="addToCart.php?product_id=<?php echo $product['product_id']; ?>" class="btn-cart me-3 px-4 pt-3 pb-3">
                       <h5 class="text-uppercase m-0">Add to Cart</h5>
-                    </button>
-                  </div>
+                    </a>
                     <a href="#" class="btn-wishlist px-4 pt-3">
                       <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
                     </a>
@@ -510,12 +546,11 @@
                     <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
                     5.0
                   </span>
-                 <h3 class="secondary-font text-primary">RM<?php echo number_format($product['price'], 2); ?></h3>
-<div class="d-flex flex-wrap mt-3">
-  <button class="btn-cart me-3 px-4 pt-3 pb-3" onclick="addToCart(<?php echo $product['product_id']; ?>)">
-    <h5 class="text-uppercase m-0">Add to Cart</h5>
-  </button>
-</div>
+                  <h3 class="secondary-font text-primary">RM<?php echo number_format($product['price'], 2); ?></h3>
+                  <div class="d-flex flex-wrap mt-3">
+                    <a href="addToCart.php?product_id=<?php echo $product['product_id']; ?>" class="btn-cart me-3 px-4 pt-3 pb-3">
+                      <h5 class="text-uppercase m-0">Add to Cart</h5>
+                    </a>
                     <a href="#" class="btn-wishlist px-4 pt-3">
                       <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
                     </a>
@@ -638,34 +673,6 @@
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <script src="cart.js"></script>
-  <script>
-  // Function to add a product to the cart
-  async function addToCart(productId) {
-    try {
-      const response = await fetch("add_to_cart.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          productId: productId,
-          quantity: 1, // Default quantity
-        }),
-      });
-
-      const result = await response.json();
-      if (result.message) {
-        alert(result.message); // Show success message
-      } else if (result.error) {
-        alert(result.error); // Show error message
-      }
-    } catch (error) {
-      console.error("Error adding to cart:", error);
-      alert("Failed to add product to cart. Please try again.");
-    }
-  }
-</script>
 </body>
 
 </html>
