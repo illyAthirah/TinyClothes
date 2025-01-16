@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Call login function and check credentials
         if (login($email, $password)) {
-            header('Location:account.php');  // Redirect to user dashboard
+            header('Location:views/account.php');  // Redirect to user dashboard
             exit();  // Stop further script execution
         } else {
             $_SESSION['errorMessage'] = "Invalid email or password. Please try again.";  // Set error message

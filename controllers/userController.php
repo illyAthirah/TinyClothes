@@ -22,10 +22,15 @@ function getUserDetails($userId) {
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-function getOrderHistory($userId) {
+function getOrderHistory($user_id) {
     global $pdo;
-    $stmt = $pdo->prepare("SELECT * FROM orders WHERE id = ?");
-    $stmt->execute([$userId]);
+
+    // Prepare the SQL query to get the user's orders
+    $sql = "SELECT * FROM orders WHERE user_id = ? ORDER BY created_at DESC"; // Use an existing column for identifying the user
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$user_id]);
+
+    // Fetch all the orders
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -38,39 +43,4 @@ function getUserLoyaltyPoints($user_id) {
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result['loyalty_points'] ?? 0; // Default to 0 if no loyalty points found
 }
-
-
-// Function to get order history for a user
- {
-    // Create a connection to your database (update credentials as needed)
-    $conn = new mysqli('localhost', 'root', '', 'tiny_clothes');
-    
-    // Check if the connection is successful
-    if ($conn->connect_error) {
-        die("Connfunction getOrderHistory($user_id)ection failed: " . $conn->connect_error);
-    }
-
-    // Prepare the SQL query to get the user's orders
-    $sql = "SELECT * FROM orders WHERE id = ? ORDER BY order_date DESC";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param('i', $user_id);  // 'i' denotes integer type for user_id
-    $stmt->execute();
-
-    // Get the result
-    $result = $stmt->get_result();
-    $orders = [];
-
-    // Fetch all the orders
-    while ($row = $result->fetch_assoc()) {
-        $orders[] = $row;
-    }
-
-    // Close the connection
-    $stmt->close();
-    $conn->close();
-
-    // Return the order history
-    return $orders;
-}
-
 ?>

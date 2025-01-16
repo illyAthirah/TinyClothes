@@ -9,7 +9,6 @@ if (!isset($_SESSION['user_id'])) {
 
 $user = getUserDetails($_SESSION['user_id']);
 $orders = getOrderHistory($_SESSION['user_id']);
-//$wishlist = getWishlist($_SESSION['user_id']);
 $loyalty_points = getUserLoyaltyPoints($_SESSION['user_id']);
 
 // Update user information logic
@@ -32,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_user_info'])) {
 // Logout Logic
 if (isset($_GET['logout'])) {
     session_destroy();
-    header('Location: login.html');
+    header('Location: ../login.html');
     exit;
 }
 ?>
@@ -43,7 +42,7 @@ if (isset($_GET['logout'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce Dashboard</title>
+    <title>User Accounts</title>
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
