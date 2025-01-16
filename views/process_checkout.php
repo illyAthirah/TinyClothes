@@ -37,8 +37,8 @@ if ($conn->query($sql) === TRUE) {
     while ($row = $result->fetch_assoc()) {
         $productId = $row['product_id'];
         $quantity = $row['quantity'];
-        $price = $row['price'];
-        $sql = "INSERT INTO order_items (order_id, product_id, quantity, price) VALUES ($orderId, $productId, $quantity, $price)";
+        
+        $sql = "INSERT INTO order_items (order_id, product_id, quantity) VALUES ($orderId, $productId, $quantity)";
         $conn->query($sql);
     }
 
