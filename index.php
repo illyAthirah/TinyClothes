@@ -287,8 +287,7 @@
               <div class="content-wrapper col-md-7 p-5 mb-5">
                 <div class="secondary-font text-primary text-uppercase mb-4">Save 10 - 20 % off</div>
                 <h2 class="banner-title display-1 fw-normal">Soft as a whisper, gentle as a hug <span
-                    class="text-primary">
-                    —our baby clothes are made with love.</span>
+                    class="text-primary"></span>
                 </h2>
                 <a href="productPage.php" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
                   shop now
@@ -307,8 +306,7 @@
               <div class="content-wrapper col-md-7 p-5 mb-5">
                 <div class="secondary-font text-primary text-uppercase mb-4">Save 10 - 20 % off</div>
                 <h2 class="banner-title display-1 fw-normal">Giggles, wiggles, and endless cuddles <span
-                    class="text-primary"> with your
-                    Babies</span>
+                    class="text-primary"></span>
                 </h2>
                 <a href="productPage.php" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
                   shop now
@@ -327,7 +325,7 @@
               <div class="content-wrapper col-md-7 p-5 mb-5">
                 <div class="secondary-font text-primary text-uppercase mb-4">Save 10 - 20 % off</div>
                 <h2 class="banner-title display-1 fw-normal">Splish, splash, giggles in the bath! <span
-                    class="text-primary">Every baby deserves a bubbly good time.</span>
+                    class="text-primary"></span>
                 </h2>
                 <a href="productPage.php" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
                   shop now
